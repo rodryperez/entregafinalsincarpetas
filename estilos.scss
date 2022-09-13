@@ -1,0 +1,246 @@
+$colornegro:black;
+$colornegro2:rgba(0, 0, 0, 0.534);
+$colorazul1:rgba(0, 9, 139, 0.445);
+$colorgris1:rgb(70, 70, 70);
+$colorgris2:rgba(63, 63, 63, 0.795);
+$colorgris3:rgb(201, 201, 201);
+$colorblanco:white;
+$coloramarillo:rgb(255, 225, 57);
+$fuente1: 40px;
+$fuente2: 30px;
+$fuente3:20px;
+$fuenteclase1:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+$var1:100%;
+$var2:1%;
+$var3:2%;
+$var4:5%;
+
+$px1:20px;
+$px2:5px;
+$px3:1px;
+$px4:10px;
+$px5:300px;
+$px6:400px;
+$px7:200px;
+$px8:600px;
+
+@mixin tamaño1 {
+    height: $px5;
+    width: $px6;
+}
+@mixin tamaño2 {
+    height: $px7; 
+    width: $px5;
+}
+
+h1{
+    @extend h4;
+    font-style: oblique;
+    font-size: $fuente1;
+    font-family: $fuenteclase1;
+}
+
+h2{
+    color: $colorblanco;
+    text-align: center;
+    background-color: $colornegro2;
+    background-size: cover;
+    font-family: $fuenteclase1;
+}
+
+h3{
+    color: $colorblanco;
+    background-color: $colornegro;
+    background-size: cover;
+    font-family: $fuenteclase1;
+}
+h4{
+    color: $colorblanco;
+    text-align: center;
+    font-family: $fuenteclase1;
+}
+h5{
+    @extend h4;
+    font-size: $fuente3;
+    background-color: $colorazul1;
+    background-size: cover;
+    font-family: $fuenteclase1
+}
+p.c{
+    background-color: $colornegro2;
+    background-size: cover;
+
+}
+a{
+    color: $colorblanco;
+    display: flex;
+    justify-content: center;
+}
+a:hover{
+    color: $coloramarillo;
+    transition: 0.7s;
+}
+.bordes{
+    border: $px2 solid;
+    color: $colorgris1;
+}
+.fondo{
+    background-image:url(../Background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+ul.menu1{
+    list-style: none;
+    font-size: 0;
+    background-color: $colorgris2;
+    justify-content: center;
+    padding: $var2;
+    border-radius: ($px1) - ($px2);
+}
+ul.menu2{
+    background-color: $colorgris2;
+}
+li.li1{
+    display: inline-block;
+    width: $var4*4;
+    position: relative;
+    font-size: $px1;
+    color: $colorblanco;
+
+}
+li a{
+    text-decoration: none;
+}
+.menu{
+    background-color: $colorgris2;
+    justify-content: center;
+    padding: $var2;
+    border-radius: ($px1) - ($px2);
+    margin: 0px 0px 30px 0px;
+}
+.boxmodel{
+border: 2px solid $colornegro;
+}
+html, body {
+    width: $var1;
+    height: $var1;
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica", sans-serif;
+}
+.carrusel1{
+    padding: $var4;
+}
+.fotoyvideo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-image: url(../fondo3.jpg);
+    margin-top: ($var4) + ($var3) + ($var2);
+    margin: 0% 0% 5% 0%;
+}
+.catalogotexto{
+    padding: 5% 5% 5% 5%;
+    background-image: url(../fondo9.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0% 0% 5% 0%;
+    font-size: $px1;
+    color: $colornegro;
+}
+.catalogotexto1{
+    background-color: rgba(255, 255, 255, 0.445);
+    border-radius: $px2*3;
+    padding: 2% 2% 2% 2%;
+    font-family: $fuenteclase1
+}
+.video1{
+    padding: $var3;
+    @include tamaño1;
+}
+.foto1{
+    padding: $var3;
+    @include tamaño1;
+}
+.marcodetexto{
+    justify-content: center;
+    padding: 3% 5% 3% 5%;
+}
+.texto{
+    border:10px solid $colorgris3;
+    background-image: url(../fondo8.jpg);
+    background-size: cover;
+    padding: $var3;
+    margin-left: $var2;
+    margin-right: $var2;
+    margin-top: $var2;
+}
+.textonoticias{
+    font-family: $fuenteclase1;
+}
+.fondoproductos{
+    padding: 5% 10% 5% 10%;
+}
+.col-md-3{
+    margin-top: $var2;
+}
+.col-md-3:hover{
+    transform: scale(110%) !important;
+    transition-duration: 0.5s;
+}
+.footer{
+    margin-top: ($px1) + ($px1) + ($px4);
+    padding: 20px 0px 20px 0px;
+    background-color: $colorgris1;
+    display: flex;
+    justify-content: center;
+    width: $var1
+}
+.formulario{
+    
+    background-image: url(../fondo4.jpg);
+    background-size: cover;
+    color: $colorblanco;
+    padding:$var4;
+    margin: 0% 0% 5% 0%;
+}
+.fondoheader{
+    background-image: url(../Barra1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.redeslink{
+    padding: 0px 0px 0px 10px;
+}
+.logo{
+    float: left;
+}
+.menu640px{
+margin: 0px 0px 0px 80%;
+}
+.textarea{
+    display: flex;
+}
+.sucursales{
+    justify-content: center;
+    padding: 3% 5% 3% 5%;
+}
+.menumovil{
+    height: $px1*6;
+    margin: 0% 0% 5% 0%;
+}
+@media (max-width:$px8){
+.menu{display: none;}
+}
+@media (max-width:440px){
+.foto1{@include tamaño2}
+.video1{@include tamaño2}
+}
+@media (min-width:$px8){
+.menumovil{display: none;}
+}
